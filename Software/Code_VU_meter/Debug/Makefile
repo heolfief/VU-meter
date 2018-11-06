@@ -41,7 +41,8 @@ C_SRCS +=  \
 ../HC595.c \
 ../main.c \
 ../Peripherals.c \
-../usart.c
+../usart.c \
+../wdt.c
 
 
 PREPROCESSING_SRCS += 
@@ -54,25 +55,29 @@ OBJS +=  \
 HC595.o \
 main.o \
 Peripherals.o \
-usart.o
+usart.o \
+wdt.o
 
 OBJS_AS_ARGS +=  \
 HC595.o \
 main.o \
 Peripherals.o \
-usart.o
+usart.o \
+wdt.o
 
 C_DEPS +=  \
 HC595.d \
 main.d \
 Peripherals.d \
-usart.d
+usart.d \
+wdt.d
 
 C_DEPS_AS_ARGS +=  \
 HC595.d \
 main.d \
 Peripherals.d \
-usart.d
+usart.d \
+wdt.d
 
 OUTPUT_FILE_PATH +=Code_VU_meter.elf
 
@@ -110,6 +115,13 @@ LINKER_SCRIPT_DEP+=
 	
 
 ./usart.o: .././usart.c
+	@echo Building file: $<
+	@echo Invoking: AVR/GNU C Compiler : 5.4.0
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.2.209\include"  -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -mmcu=atmega328p -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.2.209\gcc\dev\atmega328p" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	@echo Finished building: $<
+	
+
+./wdt.o: .././wdt.c
 	@echo Building file: $<
 	@echo Invoking: AVR/GNU C Compiler : 5.4.0
 	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.2.209\include"  -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -mmcu=atmega328p -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.2.209\gcc\dev\atmega328p" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 

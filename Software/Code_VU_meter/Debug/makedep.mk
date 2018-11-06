@@ -10,3 +10,5 @@ Peripherals.c
 
 usart.c
 
+wdt.c
+

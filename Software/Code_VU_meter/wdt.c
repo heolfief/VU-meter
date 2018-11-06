@@ -5,6 +5,7 @@
  *  Author: Heol
  */ 
 
+#include <avr/io.h>
 #include "headers/wdt.h"
 
 
