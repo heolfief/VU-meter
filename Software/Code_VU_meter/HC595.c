@@ -2,7 +2,7 @@
  * HC595.c
  *
  * Created: 27/10/2018 17:13:38
- *  Author: Heol
+ *  Author: Heol Fief
  */ 
 
 #include "headers/HC595.h"

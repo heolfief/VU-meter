@@ -2,7 +2,7 @@
  * Peripherals.h
  *
  * Created: 24/10/2018 18:49:35
- *  Author: Heol
+ *  Author: Heol Fief
  */ 
 
 

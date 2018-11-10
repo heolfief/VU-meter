@@ -2,7 +2,7 @@
  * wdt.c
  *
  * Created: 31/10/2018 20:12:24
- *  Author: Heol
+ *  Author: Heol Fief
  */ 
 
 #include <avr/io.h>

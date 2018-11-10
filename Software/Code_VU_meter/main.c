@@ -2,7 +2,7 @@
  * Code_VU_meter.c
  *
  * Created: 24/10/2018 18:37:47
- * Author : Heol
+ * Author : Heol Fief
  */ 
 
 #ifndef F_CPU
