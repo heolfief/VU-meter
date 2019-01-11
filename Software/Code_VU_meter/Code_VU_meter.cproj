@@ -150,42 +150,42 @@
     </ToolchainSettings>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="HC595.c">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="headers\Config.h">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="headers\HC595.h">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="headers\Peripherals.h">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="headers\usart.h">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="headers\usart_config.h">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="headers\wdt.h">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="main.c">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="Peripherals.c">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="usart.c">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="wdt.c">
-      <SubType>compile</SubType>
-    </Compile>
+    <Folder Include="src" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="headers" />
+    <Compile Include="src\Config.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\HC595.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\HC595.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\main.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Peripherals.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Peripherals.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\usart.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\usart.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\usart_config.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\wdt.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\wdt.h">
+      <SubType>compile</SubType>
+    </Compile>
   </ItemGroup>
   <Import Project="$(AVRSTUDIO_EXE_PATH)\\Vs\\Compiler.targets" />
 </Project>

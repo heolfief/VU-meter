@@ -15,7 +15,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-#include "headers/usart.h"
+#include "usart.h"
 
 #ifndef NO_TX0_INTERRUPT
 	volatile uint8_t tx0_Tail, tx0_Head;

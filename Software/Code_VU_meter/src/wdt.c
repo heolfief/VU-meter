@@ -6,7 +6,7 @@
  */ 
 
 #include <avr/io.h>
-#include "headers/wdt.h"
+#include "wdt.h"
 
 
 void wdt_init()

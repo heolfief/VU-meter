@@ -5,8 +5,8 @@
  *  Author: Heol Fief
  */ 
 
-#include "headers/HC595.h"
-#include "headers/Config.h"
+#include "HC595.h"
+#include "Config.h"
 
 void HC595Write(uint8_t *led_array)
 {

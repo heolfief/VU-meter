@@ -12,11 +12,11 @@
 #include <avr/io.h>
 #include <util/delay.h>
 #include <avr/interrupt.h>
-#include "headers/Peripherals.h"
-#include "headers/usart.h"
-#include "headers/HC595.h"
-#include "headers/Config.h"
-#include "headers/wdt.h"
+#include "Peripherals.h"
+#include "usart.h"
+#include "HC595.h"
+#include "Config.h"
+#include "wdt.h"
 
 int main(void)
 {

@@ -2,13 +2,13 @@
 # Automatically-generated file. Do not edit or delete the file
 ################################################################################
 
-HC595.c
+src\HC595.c
 
-main.c
+src\main.c
 
-Peripherals.c
+src\Peripherals.c
 
-usart.c
+src\usart.c
 
-wdt.c
+src\wdt.c
 

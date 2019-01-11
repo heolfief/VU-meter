@@ -14,10 +14,10 @@
 #include <util/delay.h>
 #include <math.h>
 #include <inttypes.h>
-#include "headers/Peripherals.h"
-#include "headers/usart.h"
-#include "headers/HC595.h"
-#include "headers/Config.h"
+#include "Peripherals.h"
+#include "usart.h"
+#include "HC595.h"
+#include "Config.h"
 
 uint8_t led_array[NUMBER_OF_LED];
 int adc_raw;
