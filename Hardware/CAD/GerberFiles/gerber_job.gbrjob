@@ -1,0 +1,24 @@
+{
+    "Header": {
+        "Comment": "All values are metric (mm)",
+        "CreationDate": "2019-01-11T22:14:32Z",
+        "GenerationSoftware": {
+            "Application": "EAGLE",
+            "Vendor": "Autodesk",
+            "Version": "9.2.2"
+        },
+        "Part": "Single"
+    },
+    "Overall": {
+        "BoardThickness": 1.57,
+        "LayerNumber": 2,
+        "Name": {
+            "ProjectId": "VU-Meter"
+        },
+        "Owner": "Heol Fief <heol.fief@gmail.com>",
+        "Size": {
+            "X": 252.72,
+            "Y": 24.13
+        }
+    }
+}
