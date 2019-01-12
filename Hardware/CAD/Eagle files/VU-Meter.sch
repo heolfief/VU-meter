@@ -13564,6 +13564,7 @@ part number 2062-2P from STA</description>
 <part name="D8" library="heol" deviceset="LED_BARGRAPH_OFFBOARD" device="LED_BARGRAPH_OFFBOARD" value="GREEN"/>
 <part name="D9" library="heol" deviceset="LED_BARGRAPH_OFFBOARD" device="LED_BARGRAPH_OFFBOARD" value="GREEN"/>
 <part name="D10" library="heol" deviceset="LED_BARGRAPH_OFFBOARD" device="LED_BARGRAPH_OFFBOARD" value="RED"/>
+<part name="J3" library="SparkFun-Connectors" library_urn="urn:adsk.eagle:library:513" deviceset="CONN_02" device="" package3d_urn="urn:adsk.eagle:package:38039/1" value="UART_DBG"/>
 </parts>
 <sheets>
 <sheet>
@@ -13651,6 +13652,10 @@ part number 2062-2P from STA</description>
 </instance>
 <instance part="P+5" gate="VCC" x="96.52" y="106.68" smashed="yes">
 <attribute name="VALUE" x="99.822" y="104.14" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="J3" gate="G$1" x="165.1" y="124.46" smashed="yes" rot="MR0">
+<attribute name="VALUE" x="167.64" y="119.634" size="1.778" layer="96" font="vector" rot="MR0"/>
+<attribute name="NAME" x="167.64" y="130.048" size="1.778" layer="95" font="vector" rot="MR0"/>
 </instance>
 </instances>
 <busses>
@@ -13942,6 +13947,24 @@ part number 2062-2P from STA</description>
 <wire x1="165.1" y1="101.6" x2="147.32" y2="101.6" width="0.1524" layer="91"/>
 <label x="149.86" y="101.6" size="1.778" layer="95"/>
 <pinref part="U1" gate="U$1" pin="PD7(AIN1)"/>
+</segment>
+</net>
+<net name="N$103" class="0">
+<segment>
+<pinref part="U1" gate="U$1" pin="PD0(RXD)"/>
+<wire x1="147.32" y1="119.38" x2="152.4" y2="119.38" width="0.1524" layer="91"/>
+<wire x1="152.4" y1="119.38" x2="152.4" y2="127" width="0.1524" layer="91"/>
+<pinref part="J3" gate="G$1" pin="2"/>
+<wire x1="152.4" y1="127" x2="157.48" y2="127" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$104" class="0">
+<segment>
+<pinref part="U1" gate="U$1" pin="PD1(TXD)"/>
+<wire x1="147.32" y1="116.84" x2="154.94" y2="116.84" width="0.1524" layer="91"/>
+<wire x1="154.94" y1="116.84" x2="154.94" y2="124.46" width="0.1524" layer="91"/>
+<pinref part="J3" gate="G$1" pin="1"/>
+<wire x1="154.94" y1="124.46" x2="157.48" y2="124.46" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
