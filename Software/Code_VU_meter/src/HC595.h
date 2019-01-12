@@ -10,7 +10,7 @@
 #ifndef HC595_H_
 #define HC595_H_
 
-void HC595Write(uint8_t *led_array);
+void HC595Write(uint8_t level, uint8_t peak);
 
 #endif /* HC595_H_ */
 	

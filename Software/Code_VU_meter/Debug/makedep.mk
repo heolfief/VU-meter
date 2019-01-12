@@ -4,6 +4,8 @@
 
 src\HC595.c
 
+src\interrupts.c
+
 src\main.c
 
 src\Peripherals.c

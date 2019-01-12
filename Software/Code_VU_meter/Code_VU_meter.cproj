@@ -162,6 +162,9 @@
     <Compile Include="src\HC595.h">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="src\interrupts.c">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="src\main.c">
       <SubType>compile</SubType>
     </Compile>
