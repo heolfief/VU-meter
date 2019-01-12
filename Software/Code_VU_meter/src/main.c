@@ -17,6 +17,7 @@
 #include "HC595.h"
 #include "Config.h"
 #include "wdt.h"
+#include "test.h"
 
 int main(void)
 {
@@ -36,6 +37,6 @@ int main(void)
 		watchdogReset();
 		
 		_delay_ms(10);
-		test();
+		test_audio();
     }
 }

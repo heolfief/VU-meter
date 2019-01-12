@@ -10,6 +10,8 @@ src\main.c
 
 src\Peripherals.c
 
+src\test.c
+
 src\usart.c
 
 src\wdt.c

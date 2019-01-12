@@ -42,6 +42,7 @@ C_SRCS +=  \
 ../src/interrupts.c \
 ../src/main.c \
 ../src/Peripherals.c \
+../src/test.c \
 ../src/usart.c \
 ../src/wdt.c
 
@@ -57,6 +58,7 @@ src/HC595.o \
 src/interrupts.o \
 src/main.o \
 src/Peripherals.o \
+src/test.o \
 src/usart.o \
 src/wdt.o
 
@@ -65,6 +67,7 @@ src/HC595.o \
 src/interrupts.o \
 src/main.o \
 src/Peripherals.o \
+src/test.o \
 src/usart.o \
 src/wdt.o
 
@@ -73,6 +76,7 @@ src/HC595.d \
 src/interrupts.d \
 src/main.d \
 src/Peripherals.d \
+src/test.d \
 src/usart.d \
 src/wdt.d
 
@@ -81,6 +85,7 @@ src/HC595.d \
 src/interrupts.d \
 src/main.d \
 src/Peripherals.d \
+src/test.d \
 src/usart.d \
 src/wdt.d
 
@@ -120,6 +125,13 @@ src/main.o: ../src/main.c
 	
 
 src/Peripherals.o: ../src/Peripherals.c
+	@echo Building file: $<
+	@echo Invoking: AVR/GNU C Compiler : 5.4.0
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.2.209\include"  -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -mmcu=atmega328p -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.2.209\gcc\dev\atmega328p" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	@echo Finished building: $<
+	
+
+src/test.o: ../src/test.c
 	@echo Building file: $<
 	@echo Invoking: AVR/GNU C Compiler : 5.4.0
 	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.2.209\include"  -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -mmcu=atmega328p -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.2.209\gcc\dev\atmega328p" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 

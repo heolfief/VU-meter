@@ -15,8 +15,6 @@
 #include "Config.h"
 #include "usart.h"
 
-extern uint8_t peak_value;
-extern uint8_t vu_value;
 
 void adc_init()
 {
@@ -52,13 +50,4 @@ void io_init()
 {
 	HC595_DDR = 0xFF;									// Port HC595_PORT set on output mode
 	HC595_PORT = 0x00;									// Initialize HC595_PORT on GND	
-}
-
-void test()
-{
-	uart_puts("$");
-	uart_putint(vu_value);
-	uart_puts(" ");
-	uart_putint(peak_value);
-	uart_puts(";");
 }
