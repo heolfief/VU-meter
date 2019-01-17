@@ -1,3 +1,12 @@
+/**
+ * \file usart_config.h
+ * \brief Header file for avr USART communication configuration.
+ * \author jnk0le@hotmail.com https://github.com/jnk0le
+ *
+ * This library is distributed under MIT license terms.
+ *
+ */
+
 #ifndef USART_CONFIG_H_
 #define USART_CONFIG_H_
 

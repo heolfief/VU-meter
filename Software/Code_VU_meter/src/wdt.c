@@ -1,9 +1,8 @@
-/*
- * wdt.c
- *
- * Created: 31/10/2018 20:12:24
- *  Author: Heol Fief
- */ 
+/**
+ * \file wdt.c
+ * \brief Functions to initialize watchdog timer.
+ * \author Heol Fief
+ */
 
 #include <avr/io.h>
 #include "wdt.h"

@@ -1,16 +1,23 @@
-/*
- * wdt.h
- *
- * Created: 31/10/2018 20:11:42
- *  Author: Heol Fief
- */ 
+/**
+ * \file wdt.h
+ * \brief Header file for watchdog timer.
+ * \author Heol Fief
+ */
 
 
 #ifndef WDT_H_
 #define WDT_H_
 
+/**
+ * \def watchdogReset() asm volatile ("wdr")
+ * \brief ASM instruction to reset watchdog.
+ */
 #define watchdogReset() asm volatile ("wdr")
 
-void wdt_init();
+/**
+ * \fn void wdt_init(void)
+ * \brief Function to initialize watchdog timer.
+ */
+void wdt_init(void);
 
 #endif /* WDT_H_ */

@@ -1,3 +1,13 @@
+/**
+ * \file usart.c
+ * \brief Functions for avr USART communication.
+ * \author jnk0le@hotmail.com https://github.com/jnk0le
+ *
+ * License : MIT.
+ *
+ */
+
+
 //**************************************************************
 // ****** FUNCTIONS FOR AVR USART COMMUNICATION *******
 //**************************************************************

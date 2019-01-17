@@ -1,9 +1,13 @@
-/*
- * Config.h
+/**
+ * \file config.h
+ * \brief User-configuration file
+ * \author Heol Fief
  *
- * Created: 30/10/2018 23:15:32
- *  Author: Heol Fief
+ * User configuration file. Change it to adapt code to your hardware.
+ *
  */ 
+
+// FUSES : avrdude command : -U lfuse:w:0xf7:m -U hfuse:w:0xde:m -U efuse:w:0xfd:m 
 
 
 #ifndef CONFIG_H_

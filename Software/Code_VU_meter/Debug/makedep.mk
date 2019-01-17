@@ -8,7 +8,7 @@ src\interrupts.c
 
 src\main.c
 
-src\Peripherals.c
+src\peripherals.c
 
 src\test.c
 

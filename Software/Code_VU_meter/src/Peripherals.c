@@ -1,9 +1,11 @@
-/*
- * Peripherals.c
+/**
+ * \file peripherals.c
+ * \brief Program for peripherals initialization and settings.
+ * \author Heol Fief
  *
- * Created: 24/10/2018 18:49:22
- *  Author: Heol Fief
- */ 
+ * File containing the functions required to initialize and set peripherals.
+ *
+ */
 
 #ifndef F_CPU
 #define F_CPU 16000000UL // 16 MHz clock speed

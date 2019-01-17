@@ -1,9 +1,11 @@
-/*
- * test.c
+/**
+ * \file test.c
+ * \brief Test program via serial output.
+ * \author Heol Fief
  *
- * Created: 12/01/2019 14:09:41
- *  Author: Heol
- */ 
+ * File containing the functions required to test program behavior via serial.
+ *
+ */
 
 #ifndef F_CPU
 #define F_CPU 16000000UL // 16 MHz clock speed

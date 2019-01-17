@@ -1,10 +1,11 @@
-/*
- * interrupts.c
+/**
+ * \file interrupts.c
+ * \brief File for ISR.
+ * \author Heol Fief
  *
- * Created: 12/01/2019 13:01:24
- *  Author: Heol
+ * File containing the Interrupt Service Routine (a.k.a. code to be run on interrupt).
+ *
  */ 
-
 #include <avr/io.h>
 #include <avr/interrupt.h>
 #include <math.h>
@@ -20,6 +21,12 @@ uint16_t threshold=0;
 uint8_t peak_value;
 uint8_t vu_value;
 
+/**
+ * \fn ISR(ADC_vect)
+ * \brief Interrupt Service Routine on ADC conversion complete. NOT A FUNCTION, automatically called by hardware.
+ * 
+ * Performs audio data acquisition and all the calculation for the audio level and peak measurement.
+ */
 ISR(ADC_vect)											// Interrupt on ADC conversion complete
 {
 	int adc_output = ADC;
@@ -63,6 +70,12 @@ ISR(ADC_vect)											// Interrupt on ADC conversion complete
 	}
 }
 
+/**
+ * \fn ISR(TIMER2_COMPA_vect)
+ * \brief Interrupt Service Routine on timer2 compare match. NOT A FUNCTION, automatically called by hardware.
+ * 
+ * Update LED display periodically (based on timer2 settings). Also change ADC channel to periodically measure potentiometers value.
+ */
 ISR(TIMER2_COMPA_vect)									// Interrupt on timer2 compare match
 {
 	static int cnt;										// Counter to alternate between ADC channel selection

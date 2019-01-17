@@ -1,8 +1,10 @@
-/*
- * HC595.c
+/**
+ * \file HC595.c
+ * \brief Shift-registers program.
+ * \author Heol Fief
  *
- * Created: 27/10/2018 17:13:38
- *  Author: Heol Fief
+ * Program for the shift-registers.
+ *
  */ 
 
 #include "HC595.h"

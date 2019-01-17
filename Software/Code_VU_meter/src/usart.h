@@ -1,3 +1,12 @@
+/**
+ * \file usart.h
+ * \brief Header file for avr USART communication.
+ * \author jnk0le@hotmail.com https://github.com/jnk0le
+ *
+ * This library is distributed under MIT license terms.
+ *
+ */
+
 #ifndef _USART_H_
 #define _USART_H_
 

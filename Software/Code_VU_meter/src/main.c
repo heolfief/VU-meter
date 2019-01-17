@@ -1,9 +1,11 @@
-/*
- * Code_VU_meter.c
+/**
+ * \file main.c
+ * \brief main program
+ * \author Heol Fief
  *
- * Created: 24/10/2018 18:37:47
- * Author : Heol Fief
- */ 
+ * Main program for the VU-meter. Initialize everything needed for program to work, and loop forever.
+ *
+ */
 
 #ifndef F_CPU
 #define F_CPU 16000000UL // 16 MHz clock speed
@@ -19,6 +21,12 @@
 #include "wdt.h"
 #include "test.h"
 
+/**
+ * \fn int main(void)
+ * \brief Main program.
+ *
+ * \return Nothing. Loops forever.
+ */
 int main(void)
 {
 	wdt_init();
