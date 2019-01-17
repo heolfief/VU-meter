@@ -10,7 +10,7 @@
 
 /**
  * \struct audio_object
- * \brief Object to handle RAAW, average, peak and VU data for and audio sample.
+ * \brief Object to handle RAW, average, peak and VU data for and audio sample.
  */
 typedef struct
 {
