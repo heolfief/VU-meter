@@ -32,6 +32,9 @@ A stabilized power supply is needed in order to provide clean power to the analo
 ## Software
 
 
+### Documents availables
+
+- <a target="_blank" href="https://github.com/heolfief/VU-Meter/blob/master/Hardware/Schematics.pdf">Schematics (PDF)</a>
 
 ## Copyright and license
 heolfief/VU-Meter is licensed under the GNU General Public License v3.0.
