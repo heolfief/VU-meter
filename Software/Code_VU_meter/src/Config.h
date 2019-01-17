@@ -1,6 +1,6 @@
 /**
  * \file config.h
- * \brief User-configuration file
+ * \brief User-configuration file.
  * \author Heol Fief
  *
  * User configuration file. Change it to adapt code to your hardware.

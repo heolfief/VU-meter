@@ -21,6 +21,7 @@
 #include "wdt.h"
 #include "test.h"
 
+
 /**
  * \fn int main(void)
  * \brief Main program.

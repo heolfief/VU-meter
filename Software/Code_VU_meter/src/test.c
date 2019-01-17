@@ -13,15 +13,15 @@
 
 #include <avr/io.h>
 #include "usart.h"
+#include "data_structure.h"
 
-extern uint8_t peak_value;
-extern uint8_t vu_value;
+extern audio_object audio_sample;
 
 void test_audio()
 {
 	uart_puts("$");
-	uart_putint(vu_value);
+	uart_putint(audio_sample.vu_value);
 	uart_puts(" ");
-	uart_putint(peak_value);
+	uart_putint(audio_sample.peak_value);
 	uart_puts(";");
 }

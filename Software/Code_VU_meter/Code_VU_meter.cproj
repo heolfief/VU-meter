@@ -153,7 +153,10 @@
     <Folder Include="src" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="src\Config.h">
+    <Compile Include="src\config.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\data_structure.h">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="src\HC595.c">
@@ -168,10 +171,10 @@
     <Compile Include="src\main.c">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="src\Peripherals.c">
+    <Compile Include="src\peripherals.c">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="src\Peripherals.h">
+    <Compile Include="src\peripherals.h">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="src\test.c">
