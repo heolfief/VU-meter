@@ -15,6 +15,8 @@ This project is an AVR based LED VU-meter. It's display consists of 80 LEDs per 
 
 [![](https://github.com/heolfief/VU-meter/blob/master/docs/vid_thumbnail.jpg)](http://www.youtube.com/watch?v=NpEaa2P7qZI "VU-meter in action")
 
+### Pictures
+
 ## Hardware
 The hardware is based on 3 main components:
 - ATmega328p AVR microcontroller
