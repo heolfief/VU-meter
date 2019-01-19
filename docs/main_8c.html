@@ -9,13 +9,6 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
-<link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="resize.js"></script>
-<script type="text/javascript" src="navtreedata.js"></script>
-<script type="text/javascript" src="navtree.js"></script>
-<script type="text/javascript">
-  $(document).ready(initResizable);
-</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -30,6 +23,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">VU-meter
    </div>
+   <div id="projectbrief">code documentation</div>
   </td>
  </tr>
  </tbody>
@@ -49,21 +43,6 @@ $(function() {
 });
 </script>
 <div id="main-nav"></div>
-</div><!-- top -->
-<div id="side-nav" class="ui-resizable side-nav-resizable">
-  <div id="nav-tree">
-    <div id="nav-tree-contents">
-      <div id="nav-sync" class="sync"></div>
-    </div>
-  </div>
-  <div id="splitbar" style="-moz-user-select:none;" 
-       class="ui-resizable-handle">
-  </div>
-</div>
-<script type="text/javascript">
-$(document).ready(function(){initNavTree('main_8c.html','');});
-</script>
-<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -78,10 +57,12 @@ $(document).ready(function(){initNavTree('main_8c.html','');});
 </iframe>
 </div>
 
+</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#define-members">Macros</a> &#124;
-<a href="#func-members">Functions</a>  </div>
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">main.c File Reference</div>  </div>
 </div><!--header-->
@@ -95,9 +76,10 @@ $(document).ready(function(){initNavTree('main_8c.html','');});
 <code>#include &quot;<a class="el" href="_peripherals_8h_source.html">Peripherals.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="usart_8h_source.html">usart.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="_h_c595_8h_source.html">HC595.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="_config_8h_source.html">Config.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="config_8h_source.html">Config.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="wdt_8h_source.html">wdt.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="test_8h_source.html">test.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="dsp_8h_source.html">dsp.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for main.c:</div>
 <div class="dyncontent">
@@ -106,10 +88,12 @@ Include dependency graph for main.c:</div>
 <area shape="rect" id="node5" href="_peripherals_8h.html" title="Peripherals header file. " alt="" coords="260,80,359,107"/>
 <area shape="rect" id="node6" href="usart_8h.html" title="Header file for avr USART communication. " alt="" coords="482,80,545,107"/>
 <area shape="rect" id="node9" href="_h_c595_8h.html" title="Shift&#45;registers header file. " alt="" coords="383,80,458,107"/>
-<area shape="rect" id="node10" href="_config_8h.html" title="User&#45;configuration file. " alt="" coords="569,80,640,107"/>
+<area shape="rect" id="node10" href="config_8h.html" title="User&#45;configuration file. " alt="" coords="569,80,640,107"/>
 <area shape="rect" id="node11" href="wdt_8h.html" title="Header file for watchdog timer. " alt="" coords="664,80,718,107"/>
 <area shape="rect" id="node12" href="test_8h.html" title="Test header file. " alt="" coords="742,80,797,107"/>
+<area shape="rect" id="node15" href="dsp_8h.html" title="DSP header file. " alt="" coords="821,80,876,107"/>
 <area shape="rect" id="node7" href="usart__config_8h.html" title="Header file for avr USART communication configuration. " alt="" coords="462,155,566,181"/>
+<area shape="rect" id="node13" href="data__structure_8h.html" title="Audio data structure declaration. " alt="" coords="750,155,866,181"/>
 </map>
 </div>
 </div><table class="memberdecls">
@@ -124,12 +108,63 @@ Functions</h2></td></tr>
 <tr class="memitem:a840291bc02cba5474a4cb46a9b9566fe"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe">main</a> (void)</td></tr>
 <tr class="memdesc:a840291bc02cba5474a4cb46a9b9566fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Main program.  <a href="#a840291bc02cba5474a4cb46a9b9566fe">More...</a><br /></td></tr>
 <tr class="separator:a840291bc02cba5474a4cb46a9b9566fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05c2e5b588ced1cd7312f5b0edc5b295"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a05c2e5b588ced1cd7312f5b0edc5b295">ISR</a> (ADC_vect)</td></tr>
+<tr class="memdesc:a05c2e5b588ced1cd7312f5b0edc5b295"><td class="mdescLeft">&#160;</td><td class="mdescRight">Interrupt Service Routine on ADC conversion complete. NOT A FUNCTION, automatically called by hardware.  <a href="#a05c2e5b588ced1cd7312f5b0edc5b295">More...</a><br /></td></tr>
+<tr class="separator:a05c2e5b588ced1cd7312f5b0edc5b295"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a8bde124aba5a581fe76fc3d59d6150c5"><td class="memItemLeft" align="right" valign="top"><a id="a8bde124aba5a581fe76fc3d59d6150c5"></a>
+<a class="el" href="structaudio__object.html">audio_object</a>&#160;</td><td class="memItemRight" valign="bottom"><b>audio_sample</b></td></tr>
+<tr class="separator:a8bde124aba5a581fe76fc3d59d6150c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa67505e12512d9536d59edb3642feaa7"><td class="memItemLeft" align="right" valign="top"><a id="aa67505e12512d9536d59edb3642feaa7"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>data_smpl_counter</b> = 0</td></tr>
+<tr class="separator:aa67505e12512d9536d59edb3642feaa7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06d36e681dbad8d07c1394a652ed732f"><td class="memItemLeft" align="right" valign="top"><a id="a06d36e681dbad8d07c1394a652ed732f"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>audio_avg</b></td></tr>
+<tr class="separator:a06d36e681dbad8d07c1394a652ed732f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca3852dab23cf0066809ecc1997fb58b"><td class="memItemLeft" align="right" valign="top"><a id="aca3852dab23cf0066809ecc1997fb58b"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>gain</b> = 1</td></tr>
+<tr class="separator:aca3852dab23cf0066809ecc1997fb58b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1306e35299d8bdd10ea0adfbf9827ad"><td class="memItemLeft" align="right" valign="top"><a id="ab1306e35299d8bdd10ea0adfbf9827ad"></a>
+uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>threshold</b> = 10</td></tr>
+<tr class="separator:ab1306e35299d8bdd10ea0adfbf9827ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61e2c01d940228db47cfcf6dafa1c2cb"><td class="memItemLeft" align="right" valign="top"><a id="a61e2c01d940228db47cfcf6dafa1c2cb"></a>
+uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>sample_ready</b> = 0</td></tr>
+<tr class="separator:a61e2c01d940228db47cfcf6dafa1c2cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4fea492036f39c812cbada5718176922"><td class="memItemLeft" align="right" valign="top"><a id="a4fea492036f39c812cbada5718176922"></a>
+uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>adc_channel</b></td></tr>
+<tr class="separator:a4fea492036f39c812cbada5718176922"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97ba202d1a655f123fcc9a2092c8887b"><td class="memItemLeft" align="right" valign="top"><a id="a97ba202d1a655f123fcc9a2092c8887b"></a>
+uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>adc_raw</b> =0</td></tr>
+<tr class="separator:a97ba202d1a655f123fcc9a2092c8887b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>main program </p>
 <dl class="section author"><dt>Author</dt><dd>Heol Fief</dd></dl>
 <p>Main program for the VU-meter. Initialize everything needed for program to work, and loop forever. </p>
 </div><h2 class="groupheader">Function Documentation</h2>
+<a id="a05c2e5b588ced1cd7312f5b0edc5b295"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a05c2e5b588ced1cd7312f5b0edc5b295">&#9670;&nbsp;</a></span>ISR()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ISR </td>
+          <td>(</td>
+          <td class="paramtype">ADC_vect&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Interrupt Service Routine on ADC conversion complete. NOT A FUNCTION, automatically called by hardware. </p>
+<p>Performs analog data acquisition and filtering calculation. </p>
+
+</div>
+</div>
 <a id="a840291bc02cba5474a4cb46a9b9566fe"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a840291bc02cba5474a4cb46a9b9566fe">&#9670;&nbsp;</a></span>main()</h2>
 
@@ -152,15 +187,11 @@ Functions</h2></td></tr>
 </div>
 </div>
 </div><!-- contents -->
-</div><!-- doc-content -->
 <!-- start footer part -->
-<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
-  <ul>
-    <li class="navelem"><a class="el" href="main_8c.html">main.c</a></li>
-    <li class="footer">Generated by
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
-  </ul>
-</div>
+<hr class="footer"/><address class="footer"><small>
+Generated by &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
 </body>
 </html>

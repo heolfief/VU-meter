@@ -1,4 +1,7 @@
 <map id="data_structure.h" name="data_structure.h">
-<area shape="rect" id="node2" href="$interrupts_8c.html" title="File for ISR. " alt="" coords="5,80,92,107"/>
-<area shape="rect" id="node3" href="$test_8c.html" title="Test program via serial output. " alt="" coords="116,80,171,107"/>
+<area shape="rect" id="node2" href="$dsp_8c.html" title="DSP functions. " alt="" coords="5,80,60,107"/>
+<area shape="rect" id="node3" href="$dsp_8h.html" title="DSP header file. " alt="" coords="84,80,139,107"/>
+<area shape="rect" id="node5" href="$test_8h.html" title="Test header file. " alt="" coords="163,80,217,107"/>
+<area shape="rect" id="node6" href="$test_8c.html" title="Test program via serial output. " alt="" coords="241,80,296,107"/>
+<area shape="rect" id="node4" href="$main_8c.html" title="main program " alt="" coords="119,155,181,181"/>
 </map>

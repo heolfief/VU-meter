@@ -13,7 +13,7 @@
 #define INCFILE1_H_
 
 /**
- * \fn void dsp_VU_peak_compute()
+ * \fn void dsp_VU_peak_compute(audio_object * smpl)
  * \brief Function to process the VU-level and peak level.
  *
  * \param smpl the audio_object structure to save processed data to. 

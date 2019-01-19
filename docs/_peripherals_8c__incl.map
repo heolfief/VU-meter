@@ -1,6 +1,0 @@
-<map id="Peripherals.c" name="Peripherals.c">
-<area shape="rect" id="node4" href="$_peripherals_8h.html" title="Peripherals header file. " alt="" coords="127,80,226,107"/>
-<area shape="rect" id="node5" href="$_config_8h.html" title="User&#45;configuration file. " alt="" coords="251,80,321,107"/>
-<area shape="rect" id="node6" href="$usart_8h.html" title="Header file for avr USART communication. " alt="" coords="345,80,408,107"/>
-<area shape="rect" id="node7" href="$usart__config_8h.html" title="Header file for avr USART communication configuration. " alt="" coords="271,155,375,181"/>
-</map>

@@ -13,7 +13,7 @@
 #define TEST_H_
 
 /**
- * \fn void test_audio(void)
+ * \fn void test_audio(audio_object * smpl)
  * \brief Function to test level and peak audio calculation.
  * Data is sent by a serial connection and formated to be displayed with https://github.com/CieNTi/serial_port_plotter software.
  *

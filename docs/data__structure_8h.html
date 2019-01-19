@@ -9,13 +9,6 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
-<link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="resize.js"></script>
-<script type="text/javascript" src="navtreedata.js"></script>
-<script type="text/javascript" src="navtree.js"></script>
-<script type="text/javascript">
-  $(document).ready(initResizable);
-</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -30,6 +23,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">VU-meter
    </div>
+   <div id="projectbrief">code documentation</div>
   </td>
  </tr>
  </tbody>
@@ -49,21 +43,6 @@ $(function() {
 });
 </script>
 <div id="main-nav"></div>
-</div><!-- top -->
-<div id="side-nav" class="ui-resizable side-nav-resizable">
-  <div id="nav-tree">
-    <div id="nav-tree-contents">
-      <div id="nav-sync" class="sync"></div>
-    </div>
-  </div>
-  <div id="splitbar" style="-moz-user-select:none;" 
-       class="ui-resizable-handle">
-  </div>
-</div>
-<script type="text/javascript">
-$(document).ready(function(){initNavTree('data__structure_8h.html','');});
-</script>
-<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -78,6 +57,7 @@ $(document).ready(function(){initNavTree('data__structure_8h.html','');});
 </iframe>
 </div>
 
+</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Data Structures</a>  </div>
@@ -88,13 +68,22 @@ $(document).ready(function(){initNavTree('data__structure_8h.html','');});
 
 <p>Audio data structure declaration.  
 <a href="#details">More...</a></p>
-<div class="textblock"><div class="dynheader">
+<div class="textblock"><code>#include &lt;inttypes.h&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include dependency graph for data_structure.h:</div>
+<div class="dyncontent">
+<div class="center"><img src="data__structure_8h__incl.png" border="0" usemap="#data__structure_8h" alt=""/></div>
+</div>
+</div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="data__structure_8h__dep__incl.png" border="0" usemap="#data__structure_8hdep" alt=""/></div>
 <map name="data__structure_8hdep" id="data__structure_8hdep">
-<area shape="rect" id="node2" href="interrupts_8c.html" title="File for ISR. " alt="" coords="5,80,92,107"/>
-<area shape="rect" id="node3" href="test_8c.html" title="Test program via serial output. " alt="" coords="116,80,171,107"/>
+<area shape="rect" id="node2" href="dsp_8c.html" title="DSP functions. " alt="" coords="5,80,60,107"/>
+<area shape="rect" id="node3" href="dsp_8h.html" title="DSP header file. " alt="" coords="84,80,139,107"/>
+<area shape="rect" id="node5" href="test_8h.html" title="Test header file. " alt="" coords="163,80,217,107"/>
+<area shape="rect" id="node6" href="test_8c.html" title="Test program via serial output. " alt="" coords="241,80,296,107"/>
+<area shape="rect" id="node4" href="main_8c.html" title="main program " alt="" coords="119,155,181,181"/>
 </map>
 </div>
 </div>
@@ -103,22 +92,18 @@ This graph shows which files directly or indirectly include this file:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Data Structures</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structaudio__object.html">audio_object</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Object to handle RAW, average, peak and VU data for and audio sample.  <a href="structaudio__object.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Object to handle average, peak and VU data for an audio sample.  <a href="structaudio__object.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Audio data structure declaration. </p>
 <dl class="section author"><dt>Author</dt><dd>Heol Fief </dd></dl>
 </div></div><!-- contents -->
-</div><!-- doc-content -->
 <!-- start footer part -->
-<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
-  <ul>
-    <li class="navelem"><a class="el" href="data__structure_8h.html">data_structure.h</a></li>
-    <li class="footer">Generated by
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
-  </ul>
-</div>
+<hr class="footer"/><address class="footer"><small>
+Generated by &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
 </body>
 </html>

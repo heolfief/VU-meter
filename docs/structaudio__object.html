@@ -9,13 +9,6 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
-<link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="resize.js"></script>
-<script type="text/javascript" src="navtreedata.js"></script>
-<script type="text/javascript" src="navtree.js"></script>
-<script type="text/javascript">
-  $(document).ready(initResizable);
-</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -30,6 +23,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">VU-meter
    </div>
+   <div id="projectbrief">code documentation</div>
   </td>
  </tr>
  </tbody>
@@ -49,21 +43,6 @@ $(function() {
 });
 </script>
 <div id="main-nav"></div>
-</div><!-- top -->
-<div id="side-nav" class="ui-resizable side-nav-resizable">
-  <div id="nav-tree">
-    <div id="nav-tree-contents">
-      <div id="nav-sync" class="sync"></div>
-    </div>
-  </div>
-  <div id="splitbar" style="-moz-user-select:none;" 
-       class="ui-resizable-handle">
-  </div>
-</div>
-<script type="text/javascript">
-$(document).ready(function(){initNavTree('structaudio__object.html','');});
-</script>
-<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -78,6 +57,7 @@ $(document).ready(function(){initNavTree('structaudio__object.html','');});
 </iframe>
 </div>
 
+</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-attribs">Data Fields</a>  </div>
@@ -86,52 +66,35 @@ $(document).ready(function(){initNavTree('structaudio__object.html','');});
 </div><!--header-->
 <div class="contents">
 
-<p>Object to handle RAW, average, peak and VU data for and audio sample.  
+<p>Object to handle average, peak and VU data for an audio sample.  
  <a href="structaudio__object.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="data__structure_8h_source.html">data_structure.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Data Fields</h2></td></tr>
-<tr class="memitem:a1fcb4cc1ec686f0960703bb572b6f4f6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structaudio__object.html#a1fcb4cc1ec686f0960703bb572b6f4f6">adc_RAW</a></td></tr>
-<tr class="separator:a1fcb4cc1ec686f0960703bb572b6f4f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a01074e01a2a7edbe0881be94cef639f6"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structaudio__object.html#a01074e01a2a7edbe0881be94cef639f6">adc_avg</a></td></tr>
-<tr class="separator:a01074e01a2a7edbe0881be94cef639f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a266724f7551c9ccba92d3176cfdc07d5"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structaudio__object.html#a266724f7551c9ccba92d3176cfdc07d5">adc_avg</a></td></tr>
+<tr class="separator:a266724f7551c9ccba92d3176cfdc07d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7e787faa3865d5af9c28ed22163c5caa"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structaudio__object.html#a7e787faa3865d5af9c28ed22163c5caa">peak_value</a></td></tr>
 <tr class="separator:a7e787faa3865d5af9c28ed22163c5caa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a25c0c57ae6261c0233fde231af3d43c8"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structaudio__object.html#a25c0c57ae6261c0233fde231af3d43c8">vu_value</a></td></tr>
 <tr class="separator:a25c0c57ae6261c0233fde231af3d43c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Object to handle RAW, average, peak and VU data for and audio sample. </p>
+<div class="textblock"><p>Object to handle average, peak and VU data for an audio sample. </p>
 </div><h2 class="groupheader">Field Documentation</h2>
-<a id="a01074e01a2a7edbe0881be94cef639f6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a01074e01a2a7edbe0881be94cef639f6">&#9670;&nbsp;</a></span>adc_avg</h2>
+<a id="a266724f7551c9ccba92d3176cfdc07d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a266724f7551c9ccba92d3176cfdc07d5">&#9670;&nbsp;</a></span>adc_avg</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">float adc_avg</td>
+          <td class="memname">uint16_t adc_avg</td>
         </tr>
       </table>
 </div><div class="memdoc">
 <p>Average ADC data. </p>
-
-</div>
-</div>
-<a id="a1fcb4cc1ec686f0960703bb572b6f4f6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1fcb4cc1ec686f0960703bb572b6f4f6">&#9670;&nbsp;</a></span>adc_RAW</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int adc_RAW</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>RAW ADC data. </p>
 
 </div>
 </div>
@@ -169,15 +132,11 @@ Data Fields</h2></td></tr>
 <li><a class="el" href="data__structure_8h_source.html">data_structure.h</a></li>
 </ul>
 </div><!-- contents -->
-</div><!-- doc-content -->
 <!-- start footer part -->
-<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
-  <ul>
-    <li class="navelem"><a class="el" href="structaudio__object.html">audio_object</a></li>
-    <li class="footer">Generated by
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
-  </ul>
-</div>
+<hr class="footer"/><address class="footer"><small>
+Generated by &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
 </body>
 </html>
