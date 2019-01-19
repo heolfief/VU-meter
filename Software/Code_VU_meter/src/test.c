@@ -15,13 +15,11 @@
 #include "usart.h"
 #include "data_structure.h"
 
-extern audio_object audio_sample;
-
-void test_audio()
+void test_audio(audio_object * smpl)
 {
 	uart_puts("$");
-	uart_putint(audio_sample.vu_value);
+	uart_putint((int)smpl->vu_value);
 	uart_puts(" ");
-	uart_putint(audio_sample.peak_value);
-	uart_puts(";");
+	uart_putint((int)smpl->peak_value);
+	uart_puts(";\n");
 }

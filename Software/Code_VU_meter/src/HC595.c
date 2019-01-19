@@ -14,7 +14,7 @@ void HC595Write(uint8_t level, uint8_t peak)
 {
 	HC595_PORT &= ~(1<<HC595_RCK);							// Freeze output during shifting
 	
-   for(uint8_t i = NUMBER_OF_LED - 1; i >= 0; --i)			// For each LED
+   for(int8_t i = NUMBER_OF_LED - 1; i >= 0; --i)			// For each LED
    {
 	   if(i>level && i!=peak) HC595_PORT &= ~(1<<HC595_SER);// Send Low level signal to DS pin
 	   else			 HC595_PORT |=  (1<<HC595_SER);			// Send High level signal to DS pin

@@ -40,7 +40,7 @@
         </dependencies>
       </framework-data>
     </AsfFrameworkConfig>
-    <avrtool>com.atmel.avrdbg.tool.simulator</avrtool>
+    <avrtool>com.atmel.avrdbg.tool.stk500</avrtool>
     <avrtoolserialnumber />
     <avrdeviceexpectedsignature>0x1E950F</avrdeviceexpectedsignature>
     <com_atmel_avrdbg_tool_stk500>
@@ -55,8 +55,7 @@
       </ToolNumber>
       <ToolName>STK500</ToolName>
     </com_atmel_avrdbg_tool_stk500>
-    <avrtoolinterface>
-    </avrtoolinterface>
+    <avrtoolinterface>ISP</avrtoolinterface>
     <avrtoolinterfaceclock>125000</avrtoolinterfaceclock>
     <com_atmel_avrdbg_tool_simulator>
       <ToolOptions xmlns="">
@@ -159,13 +158,16 @@
     <Compile Include="src\data_structure.h">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="src\dsp.c">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="src\HC595.c">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="src\HC595.h">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="src\interrupts.c">
+    <Compile Include="src\dsp.h">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="src\main.c">

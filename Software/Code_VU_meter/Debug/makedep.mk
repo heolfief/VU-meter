@@ -2,9 +2,9 @@
 # Automatically-generated file. Do not edit or delete the file
 ################################################################################
 
-src\HC595.c
+src\dsp.c
 
-src\interrupts.c
+src\HC595.c
 
 src\main.c
 

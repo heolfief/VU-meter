@@ -14,12 +14,12 @@
 #define CONFIG_H_
 
 /* SOFTWARE CONFIG */
-#define AVERAGEWIDTH			4			// Number of samples for the digital filter
-#define PEAK_HOLD_TIME			600			// Hold time for the peak before falling
+#define AVERAGEWIDTH			100			// Number of samples for the digital filter (don't change, dependent on sampling frequency)
+#define PEAK_HOLD_TIME			300			// Hold time for the peak before falling
 #define PEAK_FALL_RATE			0.2			// Speed for the peak to fall
 
 #define GAIN_MIN				0.5			// Minimal input signal gain
-#define GAIN_MAX				2.0			// Maximal input signal gain
+#define GAIN_MAX				6.0			// Maximal input signal gain
 
 /* HARDWARE CONFIG */
 #define NUMBER_OF_LED			80			// Number of LED for the VU meter display
