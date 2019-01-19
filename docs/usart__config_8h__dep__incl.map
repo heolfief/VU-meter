@@ -1,7 +1,0 @@
-<map id="usart_config.h" name="usart_config.h">
-<area shape="rect" id="node2" href="$usart_8h.html" title="Header file for avr USART communication. " alt="" coords="157,80,219,107"/>
-<area shape="rect" id="node3" href="$main_8c.html" title="main program " alt="" coords="5,155,67,181"/>
-<area shape="rect" id="node4" href="$peripherals_8c.html" title="Program for peripherals initialization and settings. " alt="" coords="91,155,187,181"/>
-<area shape="rect" id="node5" href="$test_8c.html" title="Test program via serial output. " alt="" coords="211,155,266,181"/>
-<area shape="rect" id="node6" href="$usart_8c.html" title="Functions for avr USART communication. " alt="" coords="290,155,353,181"/>
-</map>
