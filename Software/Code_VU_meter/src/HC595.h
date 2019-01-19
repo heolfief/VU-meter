@@ -7,7 +7,6 @@
  *
  */ 
 
-
 #include <avr/io.h>
 
 #ifndef HC595_H_

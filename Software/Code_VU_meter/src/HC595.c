@@ -7,7 +7,7 @@
  *
  */ 
 
-#include "HC595.h"
+#include "hc595.h"
 #include "Config.h"
 
 void HC595Write(uint8_t level, uint8_t peak)

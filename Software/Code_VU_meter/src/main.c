@@ -16,7 +16,7 @@
 #include <avr/interrupt.h>
 #include "Peripherals.h"
 #include "usart.h"
-#include "HC595.h"
+#include "hc595.h"
 #include "Config.h"
 #include "wdt.h"
 #include "test.h"
