@@ -28,7 +28,7 @@ audio_object audio_sample;
 int data_smpl_counter = 0;
 float audio_avg;
 float gain = 1;
-uint16_t threshold = 10;
+uint16_t threshold = 30;
 uint8_t sample_ready = 0;
 uint8_t adc_channel;
 uint16_t adc_raw=0;
@@ -41,13 +41,15 @@ uint16_t adc_raw=0;
  */
 int main(void)
 {
-	wdt_init();
+	//wdt_init();
 	tmr0_init();
 	adc_init();
 	io_init();
 	
+	#ifdef UART_DEBUG
 	uart_set_FrameFormat(USART_8BIT_DATA|USART_1STOP_BIT|USART_NO_PARITY|USART_ASYNC_MODE);
 	uart_init(BAUD_CALC(115200));
+	#endif
 	
 	sei();		// Enable interrupts
 	
@@ -57,14 +59,13 @@ int main(void)
 	
 	while(1)
     {
-		watchdogReset();										// Feed the watchdog
-		
+		//watchdogReset();										// Feed the watchdog
 		if(sample_ready)
 		{
 			sample_ready = 0;									// reset flag
 			dsp_VU_peak_compute(&audio_sample);					// Compute acquired data
 			
-			#ifdef DEBUG
+			#ifdef UART_DEBUG
 			test_audio(&audio_sample);							// Send data via serial (debug only)
 			#endif
 			
@@ -72,6 +73,8 @@ int main(void)
 			
 			if(adc_channel & 1) ADMUX = GAIN_ADC_CHANNEL & 0b111;// ...
 			else ADMUX = THRESHOLD_ADC_CHANNEL & 0b111;			// ... Alternate between ADC channel selection
+			ADMUX &= ~(1<<REFS1);								// ...
+			ADMUX |= (1<<REFS0);								// ... VCC used as Voltage Reference
 			++adc_channel;										// Increase counter
 		}
 		_delay_ms(1);
@@ -88,10 +91,10 @@ int main(void)
 ISR(ADC_vect)											// Interrupt on ADC conversion complete
 {
 	adc_raw = ADC;										// Get ADC RAW data
-	
+
 	TIFR0=(1<<OCF0A);									// Disable tmr0 comp match a interrupt
 	
-	if ((ADMUX & 0b111)==AUDIO_ADC_CHANNEL)				// If ADC read audio signal
+	if ((ADMUX & 0b111) == AUDIO_ADC_CHANNEL)			// If ADC read audio signal
 	{		
 		adc_raw = (float)adc_raw * gain;				// Multiply signal by gain
 		if(adc_raw>1023)adc_raw=1023;					// Stay on 10bits representation
@@ -111,17 +114,22 @@ ISR(ADC_vect)											// Interrupt on ADC conversion complete
 			sample_ready = 1;							// Enable sample ready flag
 			data_smpl_counter = 0;						// Reset samples counter 
 		}
+		return;
 	}
 	
-	if ((ADMUX & 0b111)==GAIN_ADC_CHANNEL)				// If ADC reads gain level
+	if ((ADMUX & 0b111) == GAIN_ADC_CHANNEL)			// If ADC reads gain level
 	{
 		gain = (float)adc_raw * (GAIN_MAX - GAIN_MIN) / (1023.0) + GAIN_MIN; // Map gain between GAIN_MIN and GAIN_MAX
 		ADMUX = AUDIO_ADC_CHANNEL & 0b111;				// Select back ADC channel
+		ADMUX |= (1<<REFS1) | (1<<REFS0);				// Internal 1.1V used as Voltage Reference
+		return;
 	}
 	
-	if ((ADMUX & 0b111)==THRESHOLD_ADC_CHANNEL)			// If ADC reads threshold level
+	if ((ADMUX & 0b111) == THRESHOLD_ADC_CHANNEL)		// If ADC reads threshold level
 	{
 		threshold = adc_raw >> 5;
 		ADMUX = AUDIO_ADC_CHANNEL & 0b111;				// Select back ADC channel
+		ADMUX |= (1<<REFS1) | (1<<REFS0);				// Internal 1.1V used as Voltage Reference
+		return;
 	}
 }

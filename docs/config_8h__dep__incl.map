@@ -1,6 +1,6 @@
 <map id="config.h" name="config.h">
 <area shape="rect" id="node2" href="$dsp_8c.html" title="DSP functions. " alt="" coords="5,80,60,107"/>
-<area shape="rect" id="node3" href="$_h_c595_8c.html" title="Shift&#45;registers program. " alt="" coords="85,80,159,107"/>
-<area shape="rect" id="node4" href="$main_8c.html" title="main program " alt="" coords="183,80,245,107"/>
-<area shape="rect" id="node5" href="$peripherals_8c.html" title="Program for peripherals initialization and settings. " alt="" coords="269,80,365,107"/>
+<area shape="rect" id="node3" href="$hc595_8c.html" title="Shift&#45;registers program. " alt="" coords="84,80,152,107"/>
+<area shape="rect" id="node4" href="$main_8c.html" title="main program " alt="" coords="177,80,238,107"/>
+<area shape="rect" id="node5" href="$peripherals_8c.html" title="Program for peripherals initialization and settings. " alt="" coords="262,80,358,107"/>
 </map>

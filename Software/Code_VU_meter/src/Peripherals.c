@@ -21,7 +21,7 @@
 void adc_init()
 {
 	ADMUX = AUDIO_ADC_CHANNEL & 0b111;					// Select audio input ADC channel
-	ADMUX &= ~((1<<REFS1) | (1<<REFS0));				// VCC used as Voltage Reference
+	ADMUX |= (1<<REFS1) | (1<<REFS0);					// Internal 1.1V used as Voltage Reference
 	ADCSRB &= ~(1<<ADTS2);								// ...
 	ADCSRB |= (1<<ADTS1) | (1<<ADTS0);					// ... Trigger ADC on Timer0 compare match A
 	ADCSRA |= (1<<ADPS1);								// ... 
@@ -42,6 +42,6 @@ void tmr0_init()
 
 void io_init()
 {
-	HC595_DDR = 0xFF;									// Port HC595_PORT set on output mode
-	HC595_PORT = 0x00;									// Initialize HC595_PORT on GND	
+	HC595_DDR |= (1<<HC595_SER) | (1<<HC595_SCK) | (1<<HC595_RCK) | (1<<HC595_SCL) | (1<<HC595_OE); // Port HC595_PORT set on output mode
+	HC595_PORT &= ~((1<<HC595_SER) | (1<<HC595_SCK) | (1<<HC595_RCK) | (1<<HC595_SCL) | (1<<HC595_OE)); // Initialize HC595_PORT on GND	
 }

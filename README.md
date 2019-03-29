@@ -1,5 +1,7 @@
 # VU-meter
 
+**[WIP] This is a work in progress**
+
 ## Table of contents
 
 - [Description](#description)
@@ -17,6 +19,7 @@ This project is an AVR based LED VU-meter. It's display consists of 80 LEDs per 
 
 ### Pictures
 
+
 ## Hardware
 The hardware is based on 3 main components:
 - ATmega328p AVR microcontroller
@@ -25,6 +28,22 @@ The hardware is based on 3 main components:
 
 This board runs on 5V DC power and should not exceed 500mA of current draw (All LEDs lit up).
 A stabilized power supply is needed in order to provide clean power to the analog circuit.
+
+### PCB
+<p align="center">
+		<img src="https://github.com/heolfief/VU-meter/blob/master/docs/img/_MG_8723.jpg" alt="" width=1000>
+</p>
+<p align="center">
+		<img src="https://github.com/heolfief/VU-meter/blob/master/docs/img/_MG_8725.jpg" alt="" width=1000>
+</p>
+
+The PCB was manufactured by <a target="_blank" href="https://www.pcbway.com">PCBWay</a>. Total cost was 44$ including shipping to France by DHL for 5 pieces.
+
+I received the PCB 6 days after placing order on their website. General quality is good. Highly recommend their service.
+
+<p align="center">
+		<img src="https://github.com/heolfief/VU-meter/blob/master/docs/img/_MG_8727.jpg" alt="" width=500>
+</p>
 
 ### Documents available
 
