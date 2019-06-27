@@ -2,6 +2,10 @@
 
 **[WIP] This is a work in progress**
 
+<p align="center">
+		<img src="https://github.com/heolfief/VU-meter/blob/master/docs/img/_MG_8800-Modifier.jpg" alt="" width=1000>
+</p>
+
 ## Table of contents
 
 - [Description](#description)
@@ -18,7 +22,15 @@ This project is an AVR based LED VU-meter. It's display consists of 80 LEDs per 
 [![](https://github.com/heolfief/VU-meter/blob/master/docs/vid_thumbnail.jpg)](http://www.youtube.com/watch?v=NpEaa2P7qZI "VU-meter in action")
 
 ### Pictures
-
+<p align="center">
+		<img src="https://github.com/heolfief/VU-meter/blob/master/docs/img/_MG_8807-Modifier.jpg" alt="" width=1000>
+</p>
+<p align="center">
+		<img src="https://github.com/heolfief/VU-meter/blob/master/docs/img/_MG_8804-Modifier.jpg" alt="" width=500>
+</p>
+<p align="center">
+		<img src="https://github.com/heolfief/VU-meter/blob/master/docs/img/_MG_8809-Modifier.jpg" alt="" width=500>
+</p>
 
 ## Hardware
 The hardware is based on 3 main components:
@@ -30,6 +42,12 @@ This board runs on 5V DC power and should not exceed 500mA of current draw (All 
 A stabilized power supply is needed in order to provide clean power to the analog circuit.
 
 ### PCB
+Populated PCB picture:
+<p align="center">
+		<img src="https://github.com/heolfief/VU-meter/blob/master/docs/img/_MG_8810-Modifier.jpg" alt="" width=1000>
+</p>
+
+Bare PCB pictures:
 <p align="center">
 		<img src="https://github.com/heolfief/VU-meter/blob/master/docs/img/_MG_8723.jpg" alt="" width=1000>
 </p>
