@@ -1,7 +1,5 @@
 # VU-meter
 
-**[WIP] This is a work in progress**
-
 <p align="center">
 		<img src="https://github.com/heolfief/VU-meter/blob/master/docs/img/_MG_8800-Modifier.jpg" alt="" width=1000>
 </p>
@@ -17,9 +15,6 @@
 ## Description
 This project is an AVR based LED VU-meter. It's display consists of 80 LEDs per audio channel. Each PCB holds all the LEDs, the analog and digital segments of the circuit and only handle one audio channel. That way you can build a stereo VU-meter just by using two instances of this circuit (which can be mechanically stacked together). Each audio channel will be completely separated and computed separately by the AVR microcontroller on each PCB.
 
-### Video demo
-
-[![](https://github.com/heolfief/VU-meter/blob/master/docs/vid_thumbnail.jpg)](http://www.youtube.com/watch?v=NpEaa2P7qZI "VU-meter in action")
 
 ### Pictures
 <p align="center">
